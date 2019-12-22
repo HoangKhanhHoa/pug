@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title FoodeeBlog
+    link(rel="stylesheet" href="../index.css")
+  body
+    header.header
+      h1
+        a.logo(href='#index') Foodee Blog
+      input#menu-btn.menu-btn(type='checkbox')
+      label.menu-icon(for='menu-btn')
+        span.navicon
+      ul.menu
+        li
+          a(href='#index') Home
+        li
+          a(href='#recipe') Recipe
+        li
+          a(href='#about') About us
+        li
+          a(href='#contact') Contact
+    section#index.home
+      div.image
+        img.img-intro(src='../img/springroll.jpg')
+        div.content-img
+          h3 Traditional Food of Viet Nam
+          span This is one of most popular food in Viet Nam. Many Vietnamese people like it and always cook for main meals to treat them family members. This is also the proud of Vietnamese people when introducing this dish to international freinds.
+    section#recipe.recipe
+      div.left
+        div.intro-recipe
+          img.img-recipe(src='../img/springroll.jpg')
+          h2 Spring Roll
+          div.recipe-time
+            ul.list-time
+              li
+                | Prepare:
+                span 30mins
+              li
+                | Cooking:
+                span 60mins
+        div.ingredient
+          h4 Ingredients
+          div.list-ingred
+            -var val_ingred = ['1 tbsp oil','2 garlic cloves , finely chopped or minced','400 g / 13 oz pork mince (ground pork), or chicken or turkey','6 dried shiitake mushrooms soaked in boiling water OR 8 fresh',' 1 1/2 cups shredded carrot (1 large or 2 small)','1 1/2 cups (heaped) bean sprouts']
+              ul
+                each index in val_ingred
+                  li= index
+      div.right
+        h2  Introduction
+        div.list-intro
+          -var val_intro = ['7 1/2 oz very thin bean thread noodles (in small skeins, also known as cellophane or mung bean noodles*)','2 oz dried wood ear mushrooms','1 medium shallot','2 garlic cloves','2 cups grated carrots (4 to 5 carrots)','1 lb ground pork shoulder','1/4 cup Asian fish sauce (preferably from Phu Quoc)','1/4 cup plus 1 teaspoon sugar','2 1/2 teaspoons black pepper','2 teaspoons salt','1 lb shrimp in shell, peeled and deveined','25 (8-inch) square frozen spring roll pastry wrappers made with wheat flour, thawed','1 large egg yolk, lightly beaten','About 6 cups vegetable oil','Accompaniments: lettuce leaves and fresh mint and cilantro leaves','N/A fresh mint','N/A cilantro leaves']
+            ul
+              each index in val_intro
+                li= index
+    section.list-recipe
+      -
+        var valList = [
+          {img: 'buncha.jpg', desc: 'Bun cha is known as one of the breakfast dishes with great smell'},
+          {img: 'bun-dau.jpg', desc: 'Bun dau is a easy dish and so delicious but many people cant eat it'},
+          {img: 'pho.jpg', desc: 'Pho is the most favorite dish voted by foreign visitors'},
+          {img: 'banh-mi.jpg', desc: 'Banh mi is also a breakfast choosen by many Vietnamese'},
+          {img: 'ga-bo-xoi.jpg', desc: 'Ga bo xoi is a snack and looked for in most of university or college in Viet Nam'},
+          {img: 'banh-trang.jpg', desc: 'Banh trang tron is a special snack in Ho Chi Minh City but it is liked by all students in school and university'},
+        ]
+      each val in valList
+        div.list-img-recipe
+          img(src="../img/" + val.img)
+          p= val.desc
+    section#contact.contact
+      h2  Contact Us
+      form.contact_form
+        input#name.input_form(type='text' name='name' placeholder='Input your name ...')
+        input#email.input_form(type='email' name='email' placeholder='Input your email ...')
+        textarea#content.input_form(name='content' placeholder='Input Message for Us')
+        button(type='submit') SEND
+    footer.foot
+      h2 Foodee Blog
+      span Developed by: [HAN-OE22-FE] Hoang Thi Khanh Hoa
+
