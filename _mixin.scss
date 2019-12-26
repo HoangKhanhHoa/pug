@@ -1,0 +1,36 @@
+@mixin menu-btn-hover {
+  background-color: #f4f4f4;
+    color: red;
+    transition: 0.2s;
+}
+@mixin menu-navicon {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+@mixin img-hover {
+    width: 100%;
+    height: 232px;
+    box-shadow: 2px 4px 28px 16px grey;
+  &:hover {
+    opacity: 0.2;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+}
+@mixin p-hover {
+  position: absolute;
+  top: 28%;
+  text-align: center;
+  opacity: 0;
+  color: #ca3406;
+  &:hover {
+    opacity: 1;
+  transition: 0.4s;
+  cursor: pointer;
+  }
+}
