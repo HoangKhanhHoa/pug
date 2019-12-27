@@ -145,7 +145,7 @@
 
 .left {
   background-color: #fff;
-  width: 40%;
+  width: 42.5%;
   margin-left: 5%;
   margin-right: 5%;
   box-shadow: 3px 5px #d2cbcb;
@@ -196,7 +196,7 @@
 
 .right {
   background-color: #f1c299;
-  width: 45%;
+  width: 42.5%;
   box-shadow: 3px 5px #d2cbcb;
   font-family: Impact;
 
@@ -449,6 +449,70 @@
   }
   .foot {
     width: 846px;
+  }
+}
+@media (max-width: 414px){
+  .header{
+    width: 415px;
+    height: 58px;
+  }
+  .home {
+    width: 414px;
+    height: 285px;
+    .image{
+      margin: 20px 79px;
+      .img-intro {
+        width: 108px;
+        height: 100px;
+        border: 3px solid #fff;
+        box-shadow: 1px 1px #d2cbcb;
+      }
+      .content-img {
+        width: 242px;
+        font-size: 10px;
+      }
+    }
+  }
+  .recipe {
+    .left {
+      .intro-recipe {
+        .img-recipe {     
+          width: 111px;
+          height: 111px;
+          padding-top: 10px;
+        }
+        .recipe-time {
+          .list-time li {
+            width: 58px;
+            font-size: 9px;
+            padding-left: 5px;
+            height: 14px;
+            padding-top: 14px;
+          }
+        }
+      }
+      .ingredient{
+        .list-ingred ul li{
+          font-size: 12px;
+          line-height: 29px;
+        }
+      }
+    }
+    .right{
+      .list-intro ul li {
+        font-size: 12px;
+        line-height: 30px;
+      }
+    }
+  }
+  .contact{
+    .contact_form {
+      margin-left: 22%;
+      .input_form {
+        height: 18px;
+        font-size: 13px;
+      }
+    }
   }
 }
 
