@@ -1,13 +1,3 @@
-body {
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-  background-color: #f4f4f4;
-}
-
-a {
-  color: #000;
-}
-@import 'mixin';
 /* header */
 .header {
   background-color: #f5a733;
@@ -30,7 +20,8 @@ a {
     padding: 20px 20px;
     border-right: 1px solid #f4f4f4;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       @include menu-btn-hover;
     }
   }
@@ -73,6 +64,7 @@ a {
           top: 5px;
           @include menu-navicon;
         }
+
         &:after {
           top: -5px;
           @include menu-navicon;
@@ -83,7 +75,8 @@ a {
 
   .menu-btn {
     display: none;
-    &:hover{
+
+    &:hover {
       @include menu-btn-hover;
     }
 
@@ -116,7 +109,7 @@ a {
 }
 
 .home {
-  background: no-repeat center/cover url(img/spring-background.jpg);
+  background: no-repeat center/cover url('../img/spring-background.jpg');
   margin-top: 58px;
   height: 800px;
   display: flex;
@@ -229,21 +222,25 @@ a {
   margin-bottom: 48px;
   position: relative;
 
+  &:hover {
+    p {
+      opacity: 1;
+    }
+
+    img {
+      opacity: 0.2;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+  }
+
   img {
-    width: 100%;
-    height: 232px;
-    box-shadow: 2px 4px 28px 16px grey;
+    @include img-hover;
   }
 
   p {
-    position: absolute;
-    top: 28%;
-    text-align: center;
-    opacity: 0;
-    color: #ca3406;
+    @include p-hover;
   }
-  @include img-hover;
-  @include p-hover;
 }
 
 .contact {
@@ -272,20 +269,14 @@ a {
     box-shadow: 2px 3px #e2dfdf;
     font-family: cursive;
     margin-bottom: 20px;
-    &:hover{
+
+    &:hover {
       background-color: #585852;
       transition: 0.2s;
       color: #ead539;
       border: 1px solid #585852;
     }
   }
-
-  // button:hover {
-  //   background-color: #585852;
-  //   transition: 0.2s;
-  //   color: #ead539;
-  //   border: 1px solid #585852;
-  // }
 }
 
 .input_form {
@@ -298,6 +289,7 @@ a {
   font-family: cursive;
   font-size: 16px;
   margin-bottom: 15px;
+
   &:hover {
     border: 2px solid #9dccc8;
     transition: 0.4s;
@@ -328,7 +320,6 @@ a {
   .header {
     li {
       float: left;
-
       a {
         padding: 20px 30px;
       }
@@ -358,6 +349,7 @@ a {
 
   .list-img-recipe {
     margin-bottom: 16px;
+    width: 46%;
 
     img {
       height: 138px;
@@ -371,5 +363,61 @@ a {
 
   .list-img-recipe p {
     font-size: 9px;
+  }
+}
+@media (max-width: 767px){
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu-icon {
+      margin-left: auto;
+    }
+
+    .menu {
+      width: 100%;
+    }
+  }
+  .home {
+    width: 767px;
+  }
+}
+@media (width: 425px){
+  .home {
+    width: 476px;
+  }
+  .recipe {
+    width: 476px;
+    .left {
+      .intro-recipe {
+        .img-recipe {
+          width: 191px;
+          height: 191px;
+        }
+      }
+      .recipe-time {
+        .list-time li {
+          width: 29%;
+          height: 5px;
+          font-size: 9px;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+  .list-recipe {
+    width: 435px;
+    .list-img-recipe img {
+      height: 182px;
+    }
+  }
+  .contact{
+    width: 435px;
+    .contact_form {
+      margin-left: 24%;
+    }
+  }
+  .foot {
+    width: 476px;
   }
 }

@@ -1,0 +1,15 @@
+@mixin menu-btn-hover {
+  background-color: #f4f4f4;
+  color: red;
+  transition: 0.2s;
+}
+
+@mixin menu-navicon {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}

@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title FoodeeBlog
-    link(rel="stylesheet" href="../index.css")
+    link(rel="stylesheet" href="css/main.css")
   body
     header.header
       h1
@@ -24,14 +24,14 @@ html(lang="en")
           a(href='#contact') Contact
     section#index.home
       div.image
-        img.img-intro(src='../img/springroll.jpg')
+        img.img-intro(src='img/springroll.jpg')
         div.content-img
           h3 Traditional Food of Viet Nam
           span This is one of most popular food in Viet Nam. Many Vietnamese people like it and always cook for main meals to treat them family members. This is also the proud of Vietnamese people when introducing this dish to international freinds.
     section#recipe.recipe
       div.left
         div.intro-recipe
-          img.img-recipe(src='../img/springroll.jpg')
+          img.img-recipe(src='img/springroll.jpg')
           h2 Spring Roll
           div.recipe-time
             ul.list-time
@@ -67,7 +67,7 @@ html(lang="en")
         ]
       each val in valList
         div.list-img-recipe
-          img(src="../img/" + val.img)
+          img(src="img/" + val.img)
           p= val.desc
     section#contact.contact
       h2  Contact Us
