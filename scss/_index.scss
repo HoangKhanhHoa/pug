@@ -235,11 +235,19 @@
   }
 
   img {
-    @include img-hover;
+    width: 100%;
+    height: 232px;
+    box-shadow: 2px 4px 28px 16px grey;
   }
 
   p {
-    @include p-hover;
+    position: absolute;
+    top: 28%;
+    text-align: center;
+    opacity: 0;
+    color: #ca3406;
+    transition: 0.4s;
+    cursor: pointer;
   }
 }
 
