@@ -369,6 +369,17 @@ a {
 @media (width: 425px) {
   .home {
     width: 476px;
+    height: 317px;
+  }
+  .home .image .img-intro {
+    width: 121px;
+    height: 121px;
+    border: 4px solid #fff;
+    margin-left: 109px;
+    box-shadow: 3px 1px #d2cbcb;
+  }
+  .home .image .content-img {
+    font-size: 10px;
   }
 
   .recipe {
